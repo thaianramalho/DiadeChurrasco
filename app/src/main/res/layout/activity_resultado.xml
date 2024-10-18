@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/background_color">
+    android:background="@color/background_color"
+    android:padding="16dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_totals"
@@ -14,9 +13,9 @@
         android:layout_marginBottom="16dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,29 +28,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Total de carne: "
+                android:textColor="@color/primary_text_color"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/primary_text_color"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txt_totalCerveja"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Total de cerveja: "
-                android:textSize="18sp"
-                android:textStyle="bold"
                 android:textColor="@color/primary_text_color"
-                android:layout_marginTop="8dp"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txt_totalRefrigerante"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Total de refrigerante: "
-                android:textSize="18sp"
-                android:textStyle="bold"
                 android:textColor="@color/primary_text_color"
-                android:layout_marginTop="8dp"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -62,9 +61,9 @@
         android:layout_marginTop="16dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        app:layout_constraintTop_toBottomOf="@id/card_totals"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/card_totals">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -77,64 +76,74 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Carne de Boi:"
-                android:textColor="@color/secondary_text_color"/>
+                android:textColor="@color/secondary_text_color" />
 
             <TextView
                 android:id="@+id/txt_resultado_porco"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Carne de Porco:"
-                android:textColor="@color/secondary_text_color"
-                android:layout_marginTop="8dp"/>
+                android:textColor="@color/secondary_text_color" />
 
             <TextView
                 android:id="@+id/txt_resultado_frango"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Carne de Frango:"
-                android:textColor="@color/secondary_text_color"
-                android:layout_marginTop="8dp"/>
+                android:textColor="@color/secondary_text_color" />
 
             <TextView
                 android:id="@+id/txt_resultado_linguica"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Linguiça:"
-                android:textColor="@color/secondary_text_color"
-                android:layout_marginTop="8dp"/>
+                android:textColor="@color/secondary_text_color" />
 
             <TextView
                 android:id="@+id/txt_sal_grosso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Sal Grosso:"
-                android:textColor="@color/secondary_text_color"
-                android:layout_marginTop="8dp"/>
+                android:textColor="@color/secondary_text_color" />
 
             <TextView
                 android:id="@+id/txt_copos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Copos:"
-                android:textColor="@color/secondary_text_color"
-                android:layout_marginTop="8dp"/>
+                android:textColor="@color/secondary_text_color" />
 
             <TextView
                 android:id="@+id/txt_carvao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Carvão:"
-                android:textColor="@color/secondary_text_color"
-                android:layout_marginTop="8dp"/>
+                android:textColor="@color/secondary_text_color" />
 
             <TextView
                 android:id="@+id/txt_tempero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Tempero:"
-                android:textColor="@color/secondary_text_color"
-                android:layout_marginTop="8dp"/>
+                android:textColor="@color/secondary_text_color" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_recalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Calcular Novamente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_details" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

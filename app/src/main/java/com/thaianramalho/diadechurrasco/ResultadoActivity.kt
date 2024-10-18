@@ -1,6 +1,8 @@
 package com.thaianramalho.diadechurrasco
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -21,7 +23,7 @@ class ResultadoActivity : AppCompatActivity() {
         val qtdCopos = (totalCerveja * 1.5)// um copo e meio por lata de cerveja
         val qtdSalGrosso = (gramasSalGrosso * totalCarne)
         val qtdCarvao = (1.5 * totalCarne)// 1.5kg de carvão por kg de carne
-        val gramasTempero  = (40 * totalCarne) // 40g de condimentos para cada kg de carne
+        val gramasTempero = (40 * totalCarne) // 40g de condimentos para cada kg de carne
 
 
         val txtTotalCarne: TextView = findViewById(R.id.txt_totalCarne)
@@ -48,5 +50,13 @@ class ResultadoActivity : AppCompatActivity() {
         txtCopos.text = String.format("Copos: %.0f unidade(s)", qtdCopos)
         txtCarvao.text = String.format("Carvão: %.1f kg", qtdCarvao)
         txtTempero.text = String.format("Tempero: %.0f gramas", gramasTempero)
+
+
+        val btnRecalcular: Button = findViewById(R.id.btn_recalcular)
+
+        btnRecalcular.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
